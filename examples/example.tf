@@ -3,7 +3,7 @@ data "aws_ses_domain_identity" "example" {
 }
 
 module "example" {
-  source = "https://github.com/silksh-terraform-modules/terraform-aws-ses-reports?ref=v0.0.1"
+  source = "github.com/silksh-terraform-modules/terraform-aws-ses-reports?ref=v0.0.1"
 
   prefix = "example" # bucket, function & role names
   ses_domain_identity = data.aws_ses_domain_identity.example.arn
